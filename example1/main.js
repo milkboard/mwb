@@ -19,7 +19,7 @@ requirejs.config({
 require([
 	'jquery',
 	'react',
-	'jsx!../src/components/example'
+	'jsx!../../src/components/example'
 ], function($, React, Hello) {
 	Hello = React.createFactory(Hello);
 
