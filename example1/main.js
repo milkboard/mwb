@@ -20,8 +20,7 @@ require([
 	'jquery',
 	'react',
 	'jsx!../../src/components/example'
-], function($, React, Hello) {
-	Hello = React.createFactory(Hello);
-
-	React.render(Hello(), document.body);
+], function($, React, HelloView) {
+	var h = new HelloView();
+	$('body').html(h.render().$el);
 });
