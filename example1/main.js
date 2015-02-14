@@ -1,13 +1,13 @@
 requirejs.config({
 	baseUrl: 'js',
 	paths: {
-		'react': 'lib/react/react-with-addons',
-		'backbone': 'lib/backbone/backbone-min',
-		'underscore': 'lib/underscore/underscore-min',
-		'JSXTransformer': 'lib/react/JSXTransformer',
+		'react': '../lib/react/react-with-addons',
+		'backbone': '../lib/backbone/backbone-min',
+		'underscore': '../lib/underscore/underscore-min',
+		'JSXTransformer': '../lib/react/JSXTransformer',
 		'jquery': 'http://code.jquery.com/jquery-1.11.2.min',
-		'jsx': 'lib/react/jsx',
-		'text': 'lib/requirejs/text'
+		'jsx': '../lib/react/jsx',
+		'text': '../lib/requirejs/text'
 	},
 	jsx: {
 		fileExtension: '.jsx',
@@ -19,8 +19,9 @@ requirejs.config({
 require([
 	'jquery',
 	'react',
-	'jsx!components/example'
-], function($, React, HelloView) {
-	var h = new HelloView();
-	$('body').html(h.render().$el);
+	'jsx!../../src/components/example'
+], function($, React, Hello) {
+	Hello = React.createFactory(Hello);
+
+	React.render(Hello(), document.body);
 });
