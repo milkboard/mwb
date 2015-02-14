@@ -19,7 +19,7 @@ requirejs.config({
 require([
 	'jquery',
 	'react',
-	'jsx!../../src/components/example'
+	'../../src/components/test'
 ], function($, React, HelloView) {
 	var h = new HelloView();
 	$('body').html(h.render().$el);
